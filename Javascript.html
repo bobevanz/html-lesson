@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function buttonclick(){
+		var inputCtrl=document.getElementById('thename');
+		var newName=inputCtrl.value;
+		console.log(newName);
+		var spanCtrl=document.getElementById("themessage");
+		spanCtrl.textContent="Thanks for following directions, nerd!"
+		}
+		function bodyload(){
+		var pCtrl=document.getElementById('theline');
+		var txt = pCtrl.textContent;
+		pCtrl.textContent += " -Greg";
+		console.log(txt);
+	}
+	</script>
+</head>
+<body onload="bodyload()">
+	<p id= "theline">This is the only line in the web page</p>
+	<input id="thename" type="text" placeholder="Enter your name" value="">
+	<button onclick="buttonclick()">Click me!</button>
+	<span id="themessage">No message yet!</span>
+
+
+
+	<!-- <script type="text/javascript"> -->
+<!-- document.write("This is a line of text inside the body tag");-->
+</script>
+</body>
+</html>
