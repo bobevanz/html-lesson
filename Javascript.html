@@ -8,8 +8,15 @@
 		var newName=inputCtrl.value;
 		console.log(newName);
 		var spanCtrl=document.getElementById("themessage");
-		spanCtrl.textContent="Thanks for following directions, nerd!"
+		spanCtrl.textContent="Thanks for following directions, "
+		var checkCtrl = document.getElementById("chkbox")
+		if(checkCtrl.checked) {
+			spanCtrl.textContent += "I appreciate it!";
+					
+		} else{
+			spanCtrl.textContent += "You nerd!";
 		}
+	}
 		function bodyload(){
 		var pCtrl=document.getElementById('theline');
 		var txt = pCtrl.textContent;
@@ -17,13 +24,15 @@
 		console.log(txt);
 	}
 	</script>
-</head>
+</head> 
 <body onload="bodyload()">
 	<p id= "theline">This is the only line in the web page</p>
 	<input id="thename" type="text" placeholder="Enter your name" value="">
 	<button onclick="buttonclick()">Click me!</button>
 	<span id="themessage">No message yet!</span>
-
+	<p>
+		<input id="chkbox" type="checkbox" value="">The answer is yes </input>
+	</p>
 
 
 	<!-- <script type="text/javascript"> -->
