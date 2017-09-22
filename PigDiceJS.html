@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head lang="en">
+	<title></title>
+<script type="text/javascript">
+	var num = 0;
+	function startgame(){
+		total =0;
+		var statusctrl = document.getElementById("status")
+		statusctrl.style.display="none";
+		display();
+	}
+	function rollDie(){
+		var rdm = Math.floor(Math.random *6) +1;
+	function display(){
+		var  ctrl=document.getElementById("total");
+				ctrl.textContent= total;
+	}
+		}
+	function Roll(){
+			var aRoll= rollDie();
+			if (aRoll>1){
+				total+= total;
+				display();
+			} else{
+				endofgame
+			}
+		return Math.floor(Math.random *6) +1;
+			display();
+	}
+
+	
+	function endofgame(){
+		var statusctrl= document.getElementById("status");
+		statusctrl.style.display ="inline";
+	}
+
+</script>
+</head>
+<body>
+<button onclick="StartGame">Start</button>
+<span id="total">Total</span>
+<input id="total" type="text" value="0" style="text-align: center";>
+<button onclick="Roll">Roll a die</button>
+</body>
+</html>

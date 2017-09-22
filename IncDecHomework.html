@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head lang="en">
+	<title></title>
+	<style> input{text-align: center}</style>
+	<script type="text/javascript">
+			var num= 0;
+			function dec() {
+					num--;
+					display();
+				// console.log("Called dec()");
+
+			}
+			function inc(){
+					num++;
+					display();
+				// console.log("Called inc()");
+			}		
+			function display(){
+				var ctrl=document.getElementById("theNumber");
+				ctrl.value = num;
+				ctrl.value.color="green";
+			}
+	</script>
+</head>
+<body>
+<button onclick="dec()">-</button>
+<input id="theNumber" type="text" value="0" style="text-align: center; color: red;">
+<button onclick="inc()">+</button>
+</body>
+</html>
